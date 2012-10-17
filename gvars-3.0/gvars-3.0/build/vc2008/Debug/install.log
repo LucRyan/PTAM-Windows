@@ -1,0 +1,11 @@
+﻿Build started 10/16/2012 10:38:30 PM.
+     1>Project "C:\Users\Luckin'\Documents\Visual Studio 2010\Projects\PTAM\gvars-3.0\gvars-3.0\build\vc2008\install.vcxproj" on node 3 (build target(s)).
+     1>Build:
+         ..\..\build\install.bat ..\..\gvars3 gvars3 ..\..\lib\*.*
+         The INCLUDEDIR environment variable must be set to point to a directory
+         to be able to perform the installation procedure.
+     1>Done Building Project "C:\Users\Luckin'\Documents\Visual Studio 2010\Projects\PTAM\gvars-3.0\gvars-3.0\build\vc2008\install.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.07

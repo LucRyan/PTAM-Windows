@@ -1,0 +1,294 @@
+# @configure_input@
+
+SHELL = /bin/sh
+srcdir = @srcdir@
+top_srcdir = @top_srcdir@
+VPATH = @srcdir@
+prefix = @prefix@
+exec_prefix = @exec_prefix@
+bindir = @bindir@
+sbindir = @sbindir@
+libexecdir = @libexecdir@
+datadir = @datadir@
+datarootdir = @datarootdir@
+sysconfdir = @sysconfdir@
+sharedstatedir = @sharedstatedir@
+localstatedir = @localstatedir@
+libdir = @libdir@
+infodir = @infodir@
+mandir = @mandir@
+includedir = @includedir@
+oldincludedir = /usr/include
+arch= @build_cpu@
+
+
+CC = @CC@
+CXX=@CXX@
+CPPFLAGS = -I. @CPPFLAGS@
+CFLAGS = $(CPPFLAGS) @CFLAGS@
+CXXFLAGS = $(CPPFLAGS) @CXXFLAGS@
+OFLAGS=@OFLAGS@
+LDFLAGS = @LDFLAGS@
+LIBS = @LIBS@ -lm @LDFLAGS@
+HLIBS = @HLIBS@ -lm @LDFLAGS@
+INSTALL = @INSTALL@
+AR=ar
+
+ifneq "$(DESTDIR)" ""
+DESTDIR+=/
+endif
+
+
+pkgdatadir = $(datadir)/@PACKAGE@
+pkglibdir = $(libdir)/@PACKAGE@
+pkgincludedir = $(includedir)/@PACKAGE@
+
+top_builddir = .
+
+ACLOCAL = @ACLOCAL@
+AUTOCONF = @AUTOCONF@
+AUTOMAKE = @AUTOMAKE@
+AUTOHEADER = @AUTOHEADER@
+
+INSTALL = @INSTALL@
+INSTALL_PROGRAM = @INSTALL_PROGRAM@ $(AM_INSTALL_PROGRAM_FLAGS)
+INSTALL_DATA = @INSTALL_DATA@
+INSTALL_SCRIPT = @INSTALL_SCRIPT@
+transform = @program_transform_name@
+
+NORMAL_INSTALL = :
+PRE_INSTALL = :
+POST_INSTALL = :
+NORMAL_UNINSTALL = :
+PRE_UNINSTALL = :
+POST_UNINSTALL = :
+MAKEINFO = @MAKEINFO@
+PACKAGE = @PACKAGE@
+VERSION = @VERSION@
+
+SUBDIRS =
+ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+CONFIG_CLEAN_FILES =
+DIST_COMMON =  README ChangeLog Makefile.am \
+Makefile.in aclocal.m4 configure configure.ac install-sh missing \
+mkinstalldirs
+
+
+DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+
+TAR = gtar
+GZIP_ENV = --best
+
+optional_objs=
+ifeq (@make_lang@,yes)
+	optional_objs+=src/GUI_language.o
+endif
+
+HEADLESSOBJS=\
+	src/gvars3.o			\
+	src/GUI.o				\
+	src/GStringUtil.o		\
+	src/gvars2.o			\
+	src/serialize.o			\
+	src/GUI_none.o			\
+	src/GUI_impl_headless.o\
+	src/inst.o				\
+	$(optional_objs)
+
+OBJS=\
+	src/gvars3.o			\
+	src/GUI.o				\
+	src/GStringUtil.o		\
+	src/gvars2.o			\
+	src/serialize.o			\
+	src/@guiobj@.o          \
+	src/GUI_non_readline.o	\
+	src/inst.o\
+	$(optional_objs)
+
+ifeq (@have_readline@,yes)
+	OBJS+=src/GUI_readline.o
+	OBJS+=src/GUI_impl_readline.o
+	CPPFLAGS+=-DGUI_HAVE_READLINE
+else
+	OBJS+=src/GUI_impl_noreadline.o
+endif
+
+	#src/@readlineobj@.o     \
+#G++ seems to run constructors in the reverse order
+#so inst needs to be last.
+
+DEBUG_OBJS=$(OBJS:src%=debug/%)
+DEBUG_HEADLESS_OBJS=$(HEADLESSOBJS:src%=debug/%)
+
+
+ifeq (@build_cpu@,x86_64)
+    CPPFLAGS+=-fPIC
+endif
+
+
+ifeq (@osx_hacks@,yes)
+
+	dhsoname=libGVars3_debug_headless.dylib
+	dhsoname1=libGVars3_debug_headless-@major@.dylib
+	dhsoname2=libGVars3_debug_headless-@major@.@minor@.dylib
+	 
+	dsoname=libGVars3_debug.dylib
+	dsoname1=libGVars3_debug-@major@.dylib
+	dsoname2=libGVars3_debug-@major@.@minor@.dylib
+
+	hsoname=libGVars3_headless.dylib
+	hsoname1=libGVars3_headless-@major@.dylib
+	hsoname2=libGVars3_headless-@major@.@minor@.dylib
+	 
+	soname=libGVars3.dylib
+	soname1=libGVars3-@major@.dylib
+	soname2=libGVars3-@major@.@minor@.dylib
+	shared=-dynamiclib
+else
+	dhsoname=libGVars3_debug_headless.so
+	dhsoname1=libGVars3_debug_headless.so.@major@
+	dhsoname2=libGVars3_debug_headless.so.@major@.@minor@
+
+	dsoname=libGVars3_debug.so
+	dsoname1=libGVars3_debug.so.@major@
+	dsoname2=libGVars3_debug.so.@major@.@minor@
+
+	hsoname=libGVars3_headless.so
+	hsoname1=libGVars3_headless.so.@major@
+	hsoname2=libGVars3_headless.so.@major@.@minor@
+
+	soname=libGVars3.so
+	soname1=libGVars3.so.@major@
+	soname2=libGVars3.so.@major@.@minor@
+	shared=-shared
+endif
+
+archive=libGVars3.a
+harchive=libGVars3_headless.a
+darchive=libGVars3_debug.a
+dharchive=libGVars3_debug_headless.a
+
+sos=   $(soname)   $(soname1)   $(soname2)
+hsos=  $(hsoname)  $(hsoname1)  $(hsoname2)
+dsos=  $(dsoname)  $(dsoname1)  $(dsoname2)
+dhsos= $(dhsoname) $(dhsoname1) $(dhsoname2)
+
+install_shared=
+
+ifneq (@make_normal@,no)
+	NORMAL=$(archive) $(snoame)
+	install_shared+=install-shared-normal
+	Narchive=$(archive)
+endif
+
+ifeq (@make_headless@,yes)
+	HEADLESS=$(harchive) $(hsoname)
+	Harchive=$(harchive)
+	install_shared+=install-shared-headless
+endif
+
+ifeq (@make_debug@,yes)
+	DEBUG=$(darchive) $(dsoname)
+	Darchive=$(darchive)
+	install_shared+=install-shared-debug
+endif
+
+ifeq (@make_headless@@make_debug@,yesyes)
+	DEBUG_HEADLESS=$(dharchive) $(dhsoname)
+	DHarchive=$(dharchive)
+	install_shared+=install-shared-debug-headless
+endif
+
+
+all: $(NORMAL) $(HEADLESS) $(DEBUG) $(DEBUG_HEADLESS)
+
+$(dhsoname): $(DEBUG_HEADLESS_OBJS)
+	rm -f $(dhsos)
+	$(CXX) $(shared) -o $(dhsoname2) $(DEBUG_HEADLESS_OBJS) $(LIBS)
+	ln -s $(dhsoname2) $(dhsoname1)
+	ln -s $(dhsoname1) $(dhsoname)
+
+$(dsoname): $(DEBUG_OBJS)
+	rm -f $(dsos)
+	$(CXX) $(shared) -o $(dsoname2) $(DEBUG_OBJS) $(LIBS)
+	ln -s $(dsoname2) $(dsoname1)
+	ln -s $(dsoname1) $(dsoname)
+
+
+$(hsoname): $(HEADLESSOBJS)
+	rm -f $(hsos)
+	$(CXX) $(shared) -o $(hsoname2) $(HEADLESSOBJS) $(HLIBS)
+	ln -s $(hsoname2) $(hsoname1)
+	ln -s $(hsoname1) $(hsoname)
+
+$(soname): $(OBJS)
+	rm -f $(sos)
+	$(CXX) $(shared) -o $(soname2) $(OBJS) $(LIBS)
+	ln -s $(soname2) $(soname1)
+	ln -s $(soname1) $(soname)
+
+.PHONY: install-static install-headers install-shared-normal install-shared-headless
+
+install:install-static $(install_shared) install-headers
+
+install-static: $(Narchive) $(Harchive) $(DHarchive) $(Darchive) 
+	mkdir -p $(DESTDIR)$(libdir)
+	cp $(Narchive) $(Harchive) $(DHarchive) $(Darchive) $(DESTDIR)$(libdir)
+
+install-shared-normal: $(soname) 
+	mkdir -p $(DESTDIR)$(libdir)
+	cp $(soname2) $(DESTDIR)$(libdir)
+	ln -fs  ./$(soname2) $(DESTDIR)$(libdir)/$(soname1)
+	ln -fs  ./$(soname1) $(DESTDIR)$(libdir)/$(soname)
+	
+install-shared-headless: $(hsoname) 
+	mkdir -p $(DESTDIR)$(libdir)
+	cp $(hsoname2) $(DESTDIR)$(libdir)
+	ln -fs  ./$(hsoname2) $(DESTDIR)$(libdir)/$(hsoname1)
+	ln -fs  ./$(hsoname1) $(DESTDIR)$(libdir)/$(hsoname)
+	
+install-shared-debug: $(dsoname) 
+	mkdir -p $(DESTDIR)$(libdir)
+	cp $(dsoname2) $(DESTDIR)$(libdir)
+	ln -fs  ./$(dsoname2) $(DESTDIR)$(libdir)/$(dsoname1)
+	ln -fs  ./$(dsoname1) $(DESTDIR)$(libdir)/$(dsoname)
+
+install-shared-debug-headless: $(dhsoname) 
+	mkdir -p $(DESTDIR)$(libdir)
+	cp $(dhsoname2) $(DESTDIR)$(libdir)
+	ln -fs  ./$(dhsoname2) $(DESTDIR)$(libdir)/$(dhsoname1)
+	ln -fs  ./$(dhsoname1) $(DESTDIR)$(libdir)/$(dhsoname)
+	
+	
+install-headers:
+	mkdir -p $(DESTDIR)$(includedir)
+	cp -r gvars3 $(DESTDIR)$(includedir)
+	
+$(darchive): $(DEBUG_OBJS)
+	$(AR) crvs $@ $^
+
+$(harchive): $(HEADLESSOBJS)
+	$(AR) crvs $@ $^
+
+$(dharchive): $(DEBUG_HEADLESS_OBJS)
+	$(AR) crvs $@ $^
+
+$(archive): $(OBJS)
+	$(AR) crvs $@ $^
+
+debug: debug/foo
+	
+debug/foo:
+	mkdir -p debug
+	touch debug/foo
+
+debug/%.o : src/%.cc debug/foo
+	$(CXX) -I. $(CPPFLAGS) $(CXXFLAGS) -O0 -D_GLIBCXX_DEBUG -c $< -o $@
+
+clean:
+	rm -f *.a src/*.o *.so *.so.? test *.o *.so.?.? main debug/*
+
+main:  main.cc
+	$(CXX) $(CXXFLAGS) -o main -lGVars3 main.cc

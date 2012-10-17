@@ -1,0 +1,51 @@
+﻿Build started 10/16/2012 10:36:50 PM.
+     1>Project "C:\Users\Luckin'\Documents\Visual Studio 2010\Projects\PTAM\libcvd-20120202\libcvd-20120202\build\vc2008\libcvd.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Release\libcvd.unsuccessfulbuild".
+       CustomBuild:
+         All outputs are up-to-date.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\.. /Zi /nologo /W3 /WX- /O2 /Ob2 /Ot /Oy- /D WIN32 /D NDEBUG /D _LIB /Gm- /EHsc /MT /GS /arch:SSE2 /fp:precise /Zc:wchar_t /Zc:forScope /openmp /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /wd4244 /analyze- /errorReport:prompt ..\..\cvd_src\bayer.cxx ..\..\cvd_src\brezenham.cc ..\..\cvd_src\colourspace_convert.cxx ..\..\cvd_src\connected_components.cc ..\..\cvd_src\convolution.cc ..\..\cvd_src\cvd_timer.cc ..\..\cvd_src\deinterlacebuffer.cc ..\..\cvd_src\diskbuffer2.cc ..\..\cvd_src\draw.cc ..\..\cvd_src\eventobject.cpp ..\..\cvd_src\exceptions.cc ..\..\cvd_src\fast_corner.cxx ..\..\cvd_src\fast_corner_9_nonmax.cxx ..\..\cvd_src\faster_corner_10.cxx ..\..\cvd_src\faster_corner_12.cxx ..\..\cvd_src\faster_corner_9.cxx ..\..\cvd_src\gltext.cpp ..\..\cvd_src\image_io.cc ..\..\cvd_src\nonmax_suppression.cxx ..\..\cvd_src\slower_corner_11.cxx ..\..\cvd_src\slower_corner_7.cxx ..\..\cvd_src\slower_corner_8.cxx ..\..\cvd_src\synchronized.cpp ..\..\cvd_src\tensor_voting.cc ..\..\cvd_src\thread.cpp ..\..\cvd_src\timeddiskbuffer.cc ..\..\cvd_src\videosource.cpp ..\..\cvd_src\videosource_nodvbuffer.cc ..\..\cvd_src\videosource_novideofilebuffer.cc ..\..\cvd_src\yuv411_to_stuff.cxx ..\..\cvd_src\yuv420.cpp ..\..\cvd_src\yuv422.cpp ..\..\cvd_src\fast\fast_10_detect.cxx ..\..\cvd_src\fast\fast_10_score.cxx ..\..\cvd_src\fast\fast_11_detect.cxx ..\..\cvd_src\fast\fast_11_score.cxx ..\..\cvd_src\fast\fast_12_detect.cxx ..\..\cvd_src\fast\fast_12_score.cxx ..\..\cvd_src\fast\fast_7_detect.cxx ..\..\cvd_src\fast\fast_7_score.cxx ..\..\cvd_src\fast\fast_8_detect.cxx ..\..\cvd_src\fast\fast_8_score.cxx ..\..\cvd_src\fast\fast_9_detect.cxx ..\..\cvd_src\fast\fast_9_score.cxx ..\..\cvd_src\i686\convolve_gaussian.cc ..\..\cvd_src\i686\gradient.cc ..\..\cvd_src\i686\utility_byte_differences.cc ..\..\cvd_src\i686\utility_double_int.cc ..\..\cvd_src\i686\utility_float.cc ..\..\pnm_src\bmp.cxx ..\..\pnm_src\bmp_read.cc ..\..\pnm_src\bmp_write.cc ..\..\pnm_src\cvdimage.cxx ..\..\pnm_src\fits.cc ..\..\pnm_src\fitswrite.cc ..\..\pnm_src\jpeg.cxx ..\..\pnm_src\pnm_grok.cxx ..\..\pnm_src\save_postscript.cxx ..\..\pnm_src\text.cxx ..\..\pnm_src\text_write.cc ..\..\cvd_src\Win32\glwindow.cpp ..\..\cvd_src\Win32\win32.cpp ..\..\cvd_src\Linux\videosource_nov4l1buffer.cc ..\..\cvd_src\Linux\videosource_nov4lbuffer.cc ..\..\cvd_src\OSX\videosource_noqtbuffer.cc ..\..\cvd_src\SSE2\half_sample.cc
+         bayer.cxx
+         brezenham.cc
+         colourspace_convert.cxx
+         connected_components.cc
+         convolution.cc
+         cvd_timer.cc
+         deinterlacebuffer.cc
+         diskbuffer2.cc
+         draw.cc
+         eventobject.cpp
+         exceptions.cc
+         fast_corner.cxx
+         fast_corner_9_nonmax.cxx
+         faster_corner_10.cxx
+         faster_corner_12.cxx
+         faster_corner_9.cxx
+         gltext.cpp
+         image_io.cc
+         nonmax_suppression.cxx
+         slower_corner_11.cxx
+         Generating Code...
+         Compiling...
+         slower_corner_7.cxx
+         slower_corner_8.cxx
+         synchronized.cpp
+         tensor_voting.cc
+         thread.cpp
+         timeddiskbuffer.cc
+         videosource.cpp
+         videosource_nodvbuffer.cc
+         videosource_novideofilebuffer.cc
+         yuv411_to_stuff.cxx
+         yuv420.cpp
+         yuv422.cpp
+         fast_10_detect.cxx
+         fast_10_score.cxx
+         fast_11_detect.cxx
+         fast_11_score.cxx
+         fast_12_detect.cxx
+         fast_12_score.cxx
+         fast_7_detect.cxx
+         fast_7_score.cxx
+         Generating Code...

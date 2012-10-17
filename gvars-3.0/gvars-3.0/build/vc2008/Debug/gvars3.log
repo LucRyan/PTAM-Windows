@@ -1,0 +1,13 @@
+﻿Build started 10/16/2012 10:41:45 PM.
+     1>Project "C:\Users\Luckin'\Documents\Visual Studio 2010\Projects\PTAM\gvars-3.0\gvars-3.0\build\vc2008\gvars3.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\gvars3.unsuccessfulbuild".
+       CustomBuild:
+         Performing Custom Build Tools
+         The system cannot find the file specified.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppCommon.targets(151,5): error MSB6006: "cmd.exe" exited with code 1.
+     1>Done Building Project "C:\Users\Luckin'\Documents\Visual Studio 2010\Projects\PTAM\gvars-3.0\gvars-3.0\build\vc2008\gvars3.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.07

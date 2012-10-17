@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A6E40617-4EC6-4644-AEF5-BDA9BA0A9C09}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Luckin%27\Documents\Visual Studio 2010\Projects\PTAM\TooN-2.0;C:\Users\Luckin%27\Documents\Visual Studio 2010\Projects\PTAM\pthread\include;C:\Users\Luckin%27\Documents\Visual Studio 2010\Projects\PTAM\libcvd-20120202\libcvd-20120202;C:\Users\Luckin%27\Documents\Visual Studio 2010\Projects\PTAM\gvars-3.0\gvars-3.0;C:\Users\Luckin%27\Documents\Visual Studio 2010\Projects\PTAM\1394camera;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Luckin%27\Documents\Visual Studio 2010\Projects\PTAM\1394camera;C:\Users\Luckin%27\Documents\Visual Studio 2010\Projects\PTAM\pthread\libs;C:\Users\Luckin%27\Documents\Visual Studio 2010\Projects\PTAM\lapack-MT-debug;C:\Users\Luckin%27\Documents\Visual Studio 2010\Projects\PTAM\libcvd-20120202\libcvd-20120202\lib;C:\Users\Luckin%27\Documents\Visual Studio 2010\Projects\PTAM\gvars-3.0\gvars-3.0\lib;$(LibraryPath)</LibraryPath>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Luckin%27\Documents\Visual Studio 2010\Projects\PTAM\lapack-MT-debug;C:\Users\Luckin%27\Documents\Visual Studio 2010\Projects\PTAM\1394camera;C:\Users\Luckin%27\Documents\Visual Studio 2010\Projects\PTAM\pthread\dll;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libcvdd.lib;gvars3d.lib;glew32.lib;opengl32.lib;1394camerad.lib;blas_win32_MTd.lib;lapack_win32_MTd.lib;pthreadVCE2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libcvd.lib;gvars3.lib;glew32.lib;opengl32.lib;1394camera.lib;blas_win32.lib;lapack_win32.lib;pthreadVCE2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="ARDriver.h" />
+    <ClInclude Include="ATANCamera.h" />
+    <ClInclude Include="EyeGame.h" />
+    <ClInclude Include="GLWindow2.h" />
+    <ClInclude Include="GLWindowMenu.h" />
+    <ClInclude Include="HomographyInit.h" />
+    <ClInclude Include="KeyFrame.h" />
+    <ClInclude Include="LapackCholesky.h" />
+    <ClInclude Include="LevelHelpers.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="MapMaker.h" />
+    <ClInclude Include="MapPoint.h" />
+    <ClInclude Include="MapViewer.h" />
+    <ClInclude Include="MEstimator.h" />
+    <ClInclude Include="MiniPatch.h" />
+    <ClInclude Include="OpenGL.h" />
+    <ClInclude Include="PatchFinder.h" />
+    <ClInclude Include="Relocaliser.h" />
+    <ClInclude Include="ShiTomasi.h" />
+    <ClInclude Include="SmallBlurryImage.h" />
+    <ClInclude Include="SmallMatrixOpts.h" />
+    <ClInclude Include="System.h" />
+    <ClInclude Include="Tracker.h" />
+    <ClInclude Include="TrackerData.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ARDriver.cc" />
+    <ClCompile Include="ATANCamera.cc" />
+    <ClCompile Include="Bundle.cc" />
+    <ClCompile Include="EyeGame.cc" />
+    <ClCompile Include="GLWindow2.cc" />
+    <ClCompile Include="GLWindowMenu.cc" />
+    <ClCompile Include="HomographyInit.cc" />
+    <ClCompile Include="KeyFrame.cc" />
+    <ClCompile Include="main.cc" />
+    <ClCompile Include="Map.cc" />
+    <ClCompile Include="MapMaker.cc" />
+    <ClCompile Include="MapPoint.cc" />
+    <ClCompile Include="MapViewer.cc" />
+    <ClCompile Include="MiniPatch.cc" />
+    <ClCompile Include="PatchFinder.cc" />
+    <ClCompile Include="Relocaliser.cc" />
+    <ClCompile Include="ShiTomasi.cc" />
+    <ClCompile Include="SmallBlurryImage.cc" />
+    <ClCompile Include="System.cc" />
+    <ClCompile Include="Tracker.cc" />
+    <ClCompile Include="VideoSource_Win32_CMU1394.cc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
