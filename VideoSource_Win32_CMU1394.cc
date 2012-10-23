@@ -1,82 +1,60 @@
-// Copyright 2008 Isis Innovation Limited
-// This VideoSource for Win32 uses CMU's 1394 driver
-// available at 
-// http://www.cs.cmu.edu/~iwan/1394/
+// This VideoSource for Win32 uses EWCLIB
+//
+// EWCLIB ver.1.2
+// http://www.geocities.jp/in_subaru/ewclib/index.html
 
 #define WIN32_LEAN_AND_MEAN
 #include "VideoSource.h"
 #include <Windows.h>
-#include <1394Camera.h>
 #include <cvd/utility.h>
+#include "ewclib.h"
 
 using namespace CVD;
 using namespace std;
 
+#define CAPTURE_SIZE_X	640
+#define CAPTURE_SIZE_Y	480
+#define FPS				30
+
 VideoSource::VideoSource()
 {
-	int nRet;
+	EWC_Open(MEDIASUBTYPE_RGB24, CAPTURE_SIZE_X, CAPTURE_SIZE_Y, FPS);
+    m_buffer = new unsigned char[EWC_GetBufferSize(0)];
 
-	C1394Camera *pCamera = new C1394Camera;
-	mptr = pCamera;
-	cout << "  CMU 1394 driver camera interface.  " << endl;
-	
-	int nNum = pCamera->RefreshCameraList();
-	cout << "  Found " << nNum << " cameras." << endl;
-	if(nNum <= 0)
-		{cerr << "! Not enough cameras found - exit." << endl; exit(1);}
-
-    nRet = pCamera->SelectCamera(0);
-	if(nRet != CAM_SUCCESS) { cerr << "!! Error on CMU1394 init (SelectCamera(0)) " << endl; exit(1);}
-    
-	pCamera->InitCamera();
-	if(nRet != CAM_SUCCESS) { cerr << "!! Error on CMU1394 init (InitCamera) " << endl; exit(1);}
-
-	unsigned long nFormat=999;
-	unsigned long nMode=999;
-	if(pCamera->HasVideoMode(1,5))
-	{	
-			nFormat = 1; nMode = 5;
-	}
-	else if(pCamera->HasVideoMode(0,5))
-	{
-			nFormat = 0; nMode = 5;
-	}
-	
-	nRet = pCamera->SetVideoFormat(nFormat);
-	if(nRet != CAM_SUCCESS) { cerr << "!! Error on CMU1394 init (SetVideoFormat) " << endl; exit(1);}
-
-	nRet = pCamera->SetVideoMode(nMode);
-	if(nRet != CAM_SUCCESS) { cerr << "!! Error on CMU1394 init (SetVideoMode) " << endl; exit(1);}
-
-	int nFrameRate = 999;
-	if(pCamera->HasVideoFrameRate(nFormat, nMode, 4))
-		nFrameRate = 4;
-	else if(pCamera->HasVideoFrameRate(nFormat, nMode, 3))
-		nFrameRate = 3;
-
-	pCamera->SetVideoFrameRate(nFrameRate);
-	if(nRet != CAM_SUCCESS) { cerr << "!! Error on CMU1394 init (SetVideoFrameRate) " << endl; exit(1);}
-
-	{
-		unsigned long x,y;
-		pCamera->GetVideoFrameDimensions(&x,&y);
-		mirSize.x = x;
-		mirSize.y = y;
-	}
-
-    pCamera->StartImageAcquisitionEx(3,10000,ACQ_START_VIDEO_STREAM);
-	if(nRet != CAM_SUCCESS) { cerr << "!! Error on CMU1394 init (StartImageAcquisitionEx) " << endl; exit(1);}
+	mirSize.x = CAPTURE_SIZE_X;
+	mirSize.y = CAPTURE_SIZE_Y;
 };
+
+VideoSource::~VideoSource()
+{
+    EWC_Close();
+    delete[] m_buffer;
+}
 
 void VideoSource::GetAndFillFrameBWandRGB(Image<CVD::byte> &imBW, Image<CVD::Rgb<CVD::byte> > &imRGB)
 {
-   C1394Camera *pCamera = (C1394Camera*) mptr;
-   pCamera->AcquireImage();
-   unsigned long nLength;
-   unsigned char *pImage = pCamera->GetRawData(&nLength);
-   BasicImage<byte> imCaptured(pImage, mirSize);
-   copy(imCaptured, imBW);
-   copy(imCaptured, imRGB);
+	EWC_GetImage(0, m_buffer);
+
+	unsigned char* pImage = m_buffer;
+
+	BasicImage<CVD::byte> imCaptured(pImage, mirSize);
+	imRGB.resize(mirSize);
+	imBW.resize(mirSize);
+
+	for (int y=0; y<mirSize.y; y++) {
+		for (int x=0; x<mirSize.x; x++) {
+			imRGB[y][x].blue = *pImage;
+			pImage++;
+
+			imRGB[y][x].green = *pImage;
+			imBW[y][x]        = *pImage;
+			pImage++;
+
+			imRGB[y][x].red = *pImage;
+			pImage++;
+		}
+	}
+
 }
 
 ImageRef VideoSource::Size()

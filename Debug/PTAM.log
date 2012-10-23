@@ -1,24 +1,353 @@
-﻿Build started 10/17/2012 12:12:20 AM.
-     1>Project "C:\Users\Luckin'\Documents\Visual Studio 2010\Projects\PTAM\PTAM.vcxproj" on node 2 (build target(s)).
+﻿Build started 10/23/2012 2:06:10 AM.
+     1>Project "C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\PTAM.vcxproj" on node 3 (build target(s)).
      1>InitializeBuildStatus:
-         Creating "Debug\PTAM.unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching "Debug\PTAM.unsuccessfulbuild".
        ClCompile:
-         All outputs are up-to-date.
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I../include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ATANCamera.cc GLWindow2.cc GLWindowMenu.cc VideoSource_Win32_CMU1394.cc
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I../include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ARDriver.cc Bundle.cc EyeGame.cc HomographyInit.cc KeyFrame.cc Map.cc MapMaker.cc MapPoint.cc MapViewer.cc MiniPatch.cc PatchFinder.cc Relocaliser.cc ShiTomasi.cc SmallBlurryImage.cc System.cc Tracker.cc VideoSource_Win32_CMU1394.cc main.cc
+         main.cc
          VideoSource_Win32_CMU1394.cc
-         GLWindowMenu.cc
-         GLWindow2.cc
-     1>c:\users\luckin'\documents\visual studio 2010\projects\ptam\glwindow2.cc(133): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>c:\users\luckin'\documents\visual studio 2010\projects\ptam\glwindow2.cc(133): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>c:\users\luckin'\documents\visual studio 2010\projects\ptam\glwindow2.cc(145): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>c:\users\luckin'\documents\visual studio 2010\projects\ptam\glwindow2.cc(145): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>c:\users\luckin'\documents\visual studio 2010\projects\ptam\glwindow2.cc(177): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-         ATANCamera.cc
+     1>c:\users\luckin'\documents\github\ptam-windows\ewclib.h(149): warning C4995: 'swprintf': name was marked as #pragma deprecated
+     1>c:\users\luckin'\documents\github\ptam-windows\ewclib.h(149): warning C4996: 'swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\swprintf.inl(85) : see declaration of 'swprintf'
+     1>c:\users\luckin'\documents\github\ptam-windows\ewclib.h(216): warning C4995: 'swprintf': name was marked as #pragma deprecated
+     1>c:\users\luckin'\documents\github\ptam-windows\ewclib.h(216): warning C4996: 'swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\swprintf.inl(85) : see declaration of 'swprintf'
+         Tracker.cc
+     1>c:\users\luckin'\documents\github\ptam-windows\keyframe.h(29): warning C4099: 'MapPoint' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\luckin'\documents\github\ptam-windows\map.h(21) : see declaration of 'MapPoint'
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(57): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+                 c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\se3.h(160) : see reference to class template instantiation 'TooN::SO3<Precision>' being compiled
+                 with
+                 [
+                     Precision=TooN::DefaultPrecision
+                 ]
+                 c:\users\luckin'\documents\github\ptam-windows\keyframe.h(81) : see reference to class template instantiation 'TooN::SE3<>' being compiled
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(58): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(59): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so2.h(53): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+                 c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\se2.h(140) : see reference to class template instantiation 'TooN::SO2<Precision>' being compiled
+                 with
+                 [
+                     Precision=TooN::DefaultPrecision
+                 ]
+                 c:\users\luckin'\documents\github\ptam-windows\relocaliser.h(33) : see reference to class template instantiation 'TooN::SE2<Precision>' being compiled
+                 with
+                 [
+                     Precision=TooN::DefaultPrecision
+                 ]
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so2.h(54): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so2.h(55): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\mappoint.h(22): warning C4099: 'KeyFrame' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\luckin'\documents\github\ptam-windows\keyframe.h(76) : see declaration of 'KeyFrame'
+     1>c:\users\luckin'\documents\github\ptam-windows\mappoint.h(24): warning C4099: 'MapMakerData' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\luckin'\documents\github\ptam-windows\mapmaker.h(30) : see declaration of 'MapMakerData'
+     1>c:\users\luckin'\documents\github\ptam-windows\trackerdata.h(17): warning C4099: 'TrackerData' : type name first seen using 'class' now seen using 'struct'
+                 c:\users\luckin'\documents\github\ptam-windows\tracker.h(34) : see declaration of 'TrackerData'
+     1>c:\users\luckin'\documents\github\ptam-windows\tracker.cc(99): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\luckin'\documents\github\ptam-windows\tracker.cc(209): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\luckin'\documents\github\ptam-windows\tracker.cc(211): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+         System.cc
+     1>c:\users\luckin'\documents\github\ptam-windows\map.h(25): warning C4099: 'Map' : type name first seen using 'class' now seen using 'struct'
+                 c:\users\luckin'\documents\github\ptam-windows\system.h(21) : see declaration of 'Map'
+     1>c:\users\luckin'\documents\github\ptam-windows\keyframe.h(29): warning C4099: 'MapPoint' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\luckin'\documents\github\ptam-windows\map.h(21) : see declaration of 'MapPoint'
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(57): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+                 c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\se3.h(160) : see reference to class template instantiation 'TooN::SO3<Precision>' being compiled
+                 with
+                 [
+                     Precision=TooN::DefaultPrecision
+                 ]
+                 c:\users\luckin'\documents\github\ptam-windows\keyframe.h(81) : see reference to class template instantiation 'TooN::SE3<>' being compiled
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(58): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(59): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so2.h(53): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+                 c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\se2.h(140) : see reference to class template instantiation 'TooN::SO2<Precision>' being compiled
+                 with
+                 [
+                     Precision=TooN::DefaultPrecision
+                 ]
+                 c:\users\luckin'\documents\github\ptam-windows\relocaliser.h(33) : see reference to class template instantiation 'TooN::SE2<Precision>' being compiled
+                 with
+                 [
+                     Precision=TooN::DefaultPrecision
+                 ]
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so2.h(54): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so2.h(55): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\mapviewer.h(21): warning C4099: 'Map' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\luckin'\documents\github\ptam-windows\map.h(25) : see declaration of 'Map'
+     1>c:\users\luckin'\documents\github\ptam-windows\system.cc(33): warning C4390: ';' : empty controlled statement found; is this the intent?
+         SmallBlurryImage.cc
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(57): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+                 c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\se3.h(160) : see reference to class template instantiation 'TooN::SO3<Precision>' being compiled
+                 with
+                 [
+                     Precision=TooN::DefaultPrecision
+                 ]
+                 c:\users\luckin'\documents\github\ptam-windows\keyframe.h(81) : see reference to class template instantiation 'TooN::SE3<>' being compiled
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(58): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(59): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so2.h(53): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+                 c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\se2.h(140) : see reference to class template instantiation 'TooN::SO2<Precision>' being compiled
+                 with
+                 [
+                     Precision=TooN::DefaultPrecision
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\utility(166) : see reference to class template instantiation 'TooN::SE2<Precision>' being compiled
+                 with
+                 [
+                     Precision=TooN::DefaultPrecision
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\utility(174) : see reference to class template instantiation 'std::_Pair_base<_Ty1,_Ty2>' being compiled
+                 with
+                 [
+                     _Ty1=TooN::SE2<TooN::DefaultPrecision>,
+                     _Ty2=double
+                 ]
+                 c:\users\luckin'\documents\github\ptam-windows\smallblurryimage.cc(99) : see reference to class template instantiation 'std::pair<_Ty1,_Ty2>' being compiled
+                 with
+                 [
+                     _Ty1=TooN::SE2<TooN::DefaultPrecision>,
+                     _Ty2=double
+                 ]
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so2.h(54): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so2.h(55): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+         ShiTomasi.cc
+         Relocaliser.cc
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(57): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+                 c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\se3.h(160) : see reference to class template instantiation 'TooN::SO3<Precision>' being compiled
+                 with
+                 [
+                     Precision=TooN::DefaultPrecision
+                 ]
+                 c:\users\luckin'\documents\github\ptam-windows\keyframe.h(81) : see reference to class template instantiation 'TooN::SE3<>' being compiled
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(58): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(59): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\map.h(21): warning C4099: 'MapPoint' : type name first seen using 'class' now seen using 'struct'
+                 c:\users\luckin'\documents\github\ptam-windows\keyframe.h(29) : see declaration of 'MapPoint'
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so2.h(53): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+                 c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\se2.h(140) : see reference to class template instantiation 'TooN::SO2<Precision>' being compiled
+                 with
+                 [
+                     Precision=TooN::DefaultPrecision
+                 ]
+                 c:\users\luckin'\documents\github\ptam-windows\relocaliser.h(33) : see reference to class template instantiation 'TooN::SE2<Precision>' being compiled
+                 with
+                 [
+                     Precision=TooN::DefaultPrecision
+                 ]
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so2.h(54): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so2.h(55): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+         PatchFinder.cc
+     1>c:\users\luckin'\documents\github\ptam-windows\keyframe.h(29): warning C4099: 'MapPoint' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\luckin'\documents\github\ptam-windows\mappoint.h(27) : see declaration of 'MapPoint'
+     1>c:\users\luckin'\documents\github\ptam-windows\keyframe.h(76): warning C4099: 'KeyFrame' : type name first seen using 'class' now seen using 'struct'
+                 c:\users\luckin'\documents\github\ptam-windows\mappoint.h(22) : see declaration of 'KeyFrame'
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(57): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+                 c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\se3.h(160) : see reference to class template instantiation 'TooN::SO3<Precision>' being compiled
+                 with
+                 [
+                     Precision=TooN::DefaultPrecision
+                 ]
+                 c:\users\luckin'\documents\github\ptam-windows\keyframe.h(81) : see reference to class template instantiation 'TooN::SE3<>' being compiled
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(58): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(59): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\patchfinder.cc(265): warning C4244: '=' : conversion from 'TooN::DefaultPrecision' to 'float', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\patchfinder.cc(266): warning C4244: '=' : conversion from 'TooN::DefaultPrecision' to 'float', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\patchfinder.cc(329): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\patchfinder.cc(330): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\patchfinder.cc(331): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\patchfinder.cc(332): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+         MiniPatch.cc
+         MapViewer.cc
+     1>c:\users\luckin'\documents\github\ptam-windows\mapviewer.h(21): warning C4099: 'Map' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\luckin'\documents\github\ptam-windows\map.h(25) : see declaration of 'Map'
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(57): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+                 c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\se3.h(160) : see reference to class template instantiation 'TooN::SO3<Precision>' being compiled
+                 with
+                 [
+                     Precision=TooN::DefaultPrecision
+                 ]
+                 c:\users\luckin'\documents\github\ptam-windows\mapviewer.h(41) : see reference to class template instantiation 'TooN::SE3<>' being compiled
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(58): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(59): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\mappoint.h(22): warning C4099: 'KeyFrame' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\luckin'\documents\github\ptam-windows\map.h(22) : see declaration of 'KeyFrame'
+     1>c:\users\luckin'\documents\github\ptam-windows\keyframe.h(29): warning C4099: 'MapPoint' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\luckin'\documents\github\ptam-windows\mappoint.h(27) : see declaration of 'MapPoint'
+     1>c:\users\luckin'\documents\github\ptam-windows\mapviewer.cc(65): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\luckin'\documents\github\ptam-windows\mapviewer.cc(65): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\luckin'\documents\github\ptam-windows\mapviewer.cc(65): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\luckin'\documents\github\ptam-windows\mapviewer.cc(74): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\luckin'\documents\github\ptam-windows\mapviewer.cc(74): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\luckin'\documents\github\ptam-windows\mapviewer.cc(74): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+         MapPoint.cc
+     1>c:\users\luckin'\documents\github\ptam-windows\keyframe.h(29): warning C4099: 'MapPoint' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\luckin'\documents\github\ptam-windows\mappoint.h(27) : see declaration of 'MapPoint'
+     1>c:\users\luckin'\documents\github\ptam-windows\keyframe.h(76): warning C4099: 'KeyFrame' : type name first seen using 'class' now seen using 'struct'
+                 c:\users\luckin'\documents\github\ptam-windows\mappoint.h(22) : see declaration of 'KeyFrame'
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(57): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+                 c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\se3.h(160) : see reference to class template instantiation 'TooN::SO3<Precision>' being compiled
+                 with
+                 [
+                     Precision=TooN::DefaultPrecision
+                 ]
+                 c:\users\luckin'\documents\github\ptam-windows\keyframe.h(81) : see reference to class template instantiation 'TooN::SE3<>' being compiled
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(58): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(59): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+         MapMaker.cc
+     1>c:\users\luckin'\documents\github\ptam-windows\keyframe.h(29): warning C4099: 'MapPoint' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\luckin'\documents\github\ptam-windows\map.h(21) : see declaration of 'MapPoint'
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(57): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+                 c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\se3.h(160) : see reference to class template instantiation 'TooN::SO3<Precision>' being compiled
+                 with
+                 [
+                     Precision=TooN::DefaultPrecision
+                 ]
+                 c:\users\luckin'\documents\github\ptam-windows\keyframe.h(81) : see reference to class template instantiation 'TooN::SE3<>' being compiled
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(58): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(59): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\mappoint.h(22): warning C4099: 'KeyFrame' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\luckin'\documents\github\ptam-windows\keyframe.h(76) : see declaration of 'KeyFrame'
+     1>c:\users\luckin'\documents\github\ptam-windows\mappoint.h(24): warning C4099: 'MapMakerData' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\luckin'\documents\github\ptam-windows\mapmaker.h(30) : see declaration of 'MapMakerData'
+         Map.cc
+     1>c:\users\luckin'\documents\github\ptam-windows\mappoint.h(22): warning C4099: 'KeyFrame' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\luckin'\documents\github\ptam-windows\map.h(22) : see declaration of 'KeyFrame'
+         KeyFrame.cc
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(57): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+                 c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\se3.h(160) : see reference to class template instantiation 'TooN::SO3<Precision>' being compiled
+                 with
+                 [
+                     Precision=TooN::DefaultPrecision
+                 ]
+                 c:\users\luckin'\documents\github\ptam-windows\keyframe.h(81) : see reference to class template instantiation 'TooN::SE3<>' being compiled
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(58): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(59): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+         HomographyInit.cc
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(57): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+                 c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\se3.h(160) : see reference to class template instantiation 'TooN::SO3<Precision>' being compiled
+                 with
+                 [
+                     Precision=TooN::DefaultPrecision
+                 ]
+                 c:\users\luckin'\documents\github\ptam-windows\homographyinit.h(39) : see reference to class template instantiation 'TooN::SE3<>' being compiled
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(58): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(59): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+         EyeGame.cc
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(57): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+                 c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\se3.h(160) : see reference to class template instantiation 'TooN::SO3<Precision>' being compiled
+                 with
+                 [
+                     Precision=TooN::DefaultPrecision
+                 ]
+                 c:\users\luckin'\documents\github\ptam-windows\eyegame.h(35) : see reference to class template instantiation 'TooN::SE3<>' being compiled
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(58): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(59): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(120): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(120): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(120): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(121): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(121): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(121): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(123): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(123): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(124): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(124): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(144): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(144): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(144): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(145): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(145): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(145): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(146): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(146): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(146): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(147): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(147): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(147): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(149): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(149): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(150): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(150): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(151): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(151): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(152): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(152): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(165): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(165): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(165): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(166): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(166): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(166): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(168): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(168): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(169): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(169): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\program files (x86)\microsoft visual studio 10.0\vc\include\xutility(2227): warning C4996: 'std::_Copy_impl': Function call with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\xutility(2212) : see declaration of 'std::_Copy_impl'
+                 c:\users\luckin'\documents\github\ptam-windows\libcvd-20120202\libcvd-20120202\cvd\convolution.h(336) : see reference to function template instantiation '_OutIt std::copy<const A*,B*>(_InIt,_InIt,_OutIt)' being compiled
+                 with
+                 [
+                     _OutIt=sum_type *,
+                     A=CVD::byte,
+                     B=sum_type,
+                     _InIt=const CVD::byte *
+                 ]
+                 c:\users\luckin'\documents\github\ptam-windows\libcvd-20120202\libcvd-20120202\cvd\convolution.h(335) : while compiling class template member function 'const sum_type *CVD::GetPixelRowTyped<A,B>::get(const A *,int,B *)'
+                 with
+                 [
+                     A=CVD::byte,
+                     B=sum_type
+                 ]
+                 c:\users\luckin'\documents\github\ptam-windows\libcvd-20120202\libcvd-20120202\cvd\convolution.h(348) : see reference to class template instantiation 'CVD::GetPixelRowTyped<A,B>' being compiled
+                 with
+                 [
+                     A=CVD::byte,
+                     B=sum_type
+                 ]
+                 c:\users\luckin'\documents\github\ptam-windows\libcvd-20120202\libcvd-20120202\cvd\convolution.h(453) : see reference to function template instantiation 'const B *CVD::getPixelRowTyped<T,sum_type>(const A *,int,B *)' being compiled
+                 with
+                 [
+                     B=sum_type,
+                     T=CVD::byte,
+                     A=CVD::byte
+                 ]
+                 c:\users\luckin'\documents\github\ptam-windows\libcvd-20120202\libcvd-20120202\cvd\convolution.h(418) : see reference to function template instantiation 'void CVD::convolveGaussian<T>(const CVD::BasicImage<T> &,CVD::BasicImage<T> &,double,double)' being compiled
+                 with
+                 [
+                     T=CVD::byte
+                 ]
+                 c:\users\luckin'\documents\github\ptam-windows\eyegame.cc(233) : see reference to function template instantiation 'void CVD::convolveGaussian<T>(CVD::BasicImage<T> &,double,double)' being compiled
+                 with
+                 [
+                     T=CVD::byte
+                 ]
+         Bundle.cc
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(57): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+                 c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\se3.h(160) : see reference to class template instantiation 'TooN::SO3<Precision>' being compiled
+                 with
+                 [
+                     Precision=TooN::DefaultPrecision
+                 ]
+                 c:\users\luckin'\documents\github\ptam-windows\bundle.h(41) : see reference to class template instantiation 'TooN::SE3<>' being compiled
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(58): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(59): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+         ARDriver.cc
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(57): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+                 c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\se3.h(160) : see reference to class template instantiation 'TooN::SO3<Precision>' being compiled
+                 with
+                 [
+                     Precision=TooN::DefaultPrecision
+                 ]
+                 c:\users\luckin'\documents\github\ptam-windows\eyegame.h(35) : see reference to class template instantiation 'TooN::SE3<>' being compiled
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(58): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\toon-2.0\toon\so3.h(59): warning C4396: 'TooN::operator >>' : the inline specifier cannot be used when a friend declaration refers to a specialization of a function template
+     1>c:\users\luckin'\documents\github\ptam-windows\ardriver.cc(249): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
          Generating Code...
        ManifestResourceCompile:
-         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\PTAM.exe.embed.manifest.res" Debug\PTAM_manifest.rc 
        Link:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Debug\PTAM.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\lib libcvdd.lib gvars3d.lib glew32.lib opengl32.lib 1394camerad.lib blas_win32_MTd.lib lapack_win32_MTd.lib pthreadVCE2.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\PTAM.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Luckin'\Documents\Visual Studio 2010\Projects\PTAM\Debug\PTAM.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Debug\PTAM.lib" /MACHINE:X86 Debug\PTAM.exe.embed.manifest.res
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Debug\PTAM.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\lib libcvdd.lib gvars3d.lib glew32.lib opengl32.lib 1394camerad.lib blas_win32_MTd.lib lapack_win32_MTd.lib pthreadVCE2.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\PTAM.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\PTAM.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Debug\PTAM.lib" /MACHINE:X86 Debug\PTAM.exe.embed.manifest.res
          Debug\ARDriver.obj
          Debug\ATANCamera.obj
          Debug\Bundle.obj
@@ -40,17 +369,80 @@
          Debug\System.obj
          Debug\Tracker.obj
          Debug\VideoSource_Win32_CMU1394.obj
+     1>libcvdd.lib(convolution.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(cvd_timer.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(fast_corner.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(faster_corner_10.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(gltext.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(nonmax_suppression.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(thread.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(fast_10_detect.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(convolve_gaussian.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(utility_float.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(glwindow.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(win32.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(half_sample.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>gvars3d.lib(GStringUtil.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>gvars3d.lib(GUI.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>gvars3d.lib(GUI_impl_noreadline.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>gvars3d.lib(GUI_non_readline.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>gvars3d.lib(gvars2.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>gvars3d.lib(gvars3.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>gvars3d.lib(inst.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>gvars3d.lib(serialize.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
        Manifest:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\PTAM.exe.embed.manifest" /manifest Debug\PTAM.exe.intermediate.manifest
-         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\PTAM.exe.embed.manifest.res" Debug\PTAM_manifest.rc 
        LinkEmbedManifest:
-         All outputs are up-to-date.
-         PTAM.vcxproj -> C:\Users\Luckin'\Documents\Visual Studio 2010\Projects\PTAM\Debug\PTAM.exe
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Debug\PTAM.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\lib libcvdd.lib gvars3d.lib glew32.lib opengl32.lib 1394camerad.lib blas_win32_MTd.lib lapack_win32_MTd.lib pthreadVCE2.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\PTAM.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\PTAM.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Debug\PTAM.lib" /MACHINE:X86 Debug\PTAM.exe.embed.manifest.res
+         Debug\ARDriver.obj
+         Debug\ATANCamera.obj
+         Debug\Bundle.obj
+         Debug\EyeGame.obj
+         Debug\GLWindow2.obj
+         Debug\GLWindowMenu.obj
+         Debug\HomographyInit.obj
+         Debug\KeyFrame.obj
+         Debug\main.obj
+         Debug\Map.obj
+         Debug\MapMaker.obj
+         Debug\MapPoint.obj
+         Debug\MapViewer.obj
+         Debug\MiniPatch.obj
+         Debug\PatchFinder.obj
+         Debug\Relocaliser.obj
+         Debug\ShiTomasi.obj
+         Debug\SmallBlurryImage.obj
+         Debug\System.obj
+         Debug\Tracker.obj
+         Debug\VideoSource_Win32_CMU1394.obj
+     1>libcvdd.lib(convolution.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(cvd_timer.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(fast_corner.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(faster_corner_10.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(gltext.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(nonmax_suppression.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(thread.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(fast_10_detect.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(convolve_gaussian.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(utility_float.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(glwindow.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(win32.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>libcvdd.lib(half_sample.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>gvars3d.lib(GStringUtil.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>gvars3d.lib(GUI.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>gvars3d.lib(GUI_impl_noreadline.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>gvars3d.lib(GUI_non_readline.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>gvars3d.lib(gvars2.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>gvars3d.lib(gvars3.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>gvars3d.lib(inst.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>gvars3d.lib(serialize.obj) : warning LNK4204: 'C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+         PTAM.vcxproj -> C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\Debug\PTAM.exe
        FinalizeBuildStatus:
          Deleting file "Debug\PTAM.unsuccessfulbuild".
          Touching "Debug\PTAM.lastbuildstate".
-     1>Done Building Project "C:\Users\Luckin'\Documents\Visual Studio 2010\Projects\PTAM\PTAM.vcxproj" (build target(s)).
+     1>Done Building Project "C:\Users\Luckin'\Documents\GitHub\PTAM-Windows\PTAM.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:07.61
+Time Elapsed 00:00:36.51
